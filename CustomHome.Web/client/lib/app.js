@@ -1,0 +1,1 @@
+﻿var app = angular.module('customAidApp', ['ui.router', 'ngMaterial', 'uiGmapgoogle-maps']);

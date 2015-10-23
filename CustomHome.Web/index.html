@@ -1,0 +1,42 @@
+﻿<html lang="en" ng-app="customAidApp">
+<head ng-app="CustomAidrApp">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <link href="Contents/angular-material.min.css" rel="stylesheet" />
+    <link href="client/styles/site.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body layout="column">
+    <md-toolbar md-scroll-shrink layout="row" layout-align="start center" layout-padding>
+        <h2>
+            <a ui-sref="map"><span class="md-title">Custom Aid</span></a>
+        </h2>
+        <span flex></span>
+        <div class="navbar-right navbar-text">
+
+        </div>
+    </md-toolbar>
+    <div ui-view flex-gt-sm layout-gt-sm="row"></div>
+
+    <script src="Scripts/lodash.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-aria.min.js"></script>
+    <script src="Scripts/angular-simple-logger.js"></script>
+    <script src="Scripts/angular-google-maps.min.js"></script>
+    <script src="Scripts/angular-material.min.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    <script src="client/lib/app.js"></script>
+    <script src="client/controllers/map.js"></script>
+    <script src="client/controllers/details.js"></script>
+    <script src="client/routes.js"></script>
+
+</body>
+
+
+
+
+
+</html>

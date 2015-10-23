@@ -1,0 +1,14 @@
+﻿<a href="/{{business.number}}">{{business.name}}</a>
+
+<div>
+    <ui-gmap-google-map center="map.center" zoom="map.zoom"></ui-gmap-google-map>
+</div>
+
+<div>
+    <ul>
+        <li>Center latitude: {{map.center.latitude}}</li>
+        <li>Center longitude: {{map.center.longitude}}</li>
+        <li>Zoom: {{map.zoom}}</li>
+        <li>Click latitude{{map.clickedMarker.latitude}}</li>
+    </ul>
+</div>
