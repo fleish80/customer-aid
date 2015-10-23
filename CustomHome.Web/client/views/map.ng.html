@@ -1,7 +1,13 @@
 ﻿<a href="/{{business.number}}">{{business.name}}</a>
 
 <div>
-    <ui-gmap-google-map center="map.center" zoom="map.zoom"></ui-gmap-google-map>
+    <script type="text/ng-template" id="searchbox.tpl.html">
+        <input id="pac-input" class="pac-controls" type="text" placeholder="Search">
+    </script>
+
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+        <ui-gmap-search-box options="searchbox.options" template="searchbox.template" events="searchbox.events" position="searchbox.position"></ui-gmap-search-box>
+    </ui-gmap-google-map>
 </div>
 
 <div>
