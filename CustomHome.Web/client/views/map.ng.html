@@ -1,20 +1,18 @@
-﻿<a href="/{{business.number}}">{{business.name}}</a>
+﻿<!--<a href="/{{business.number}}">{{business.name}}</a>-->
 
-<div>
+<section class="map">
     <script type="text/ng-template" id="searchbox.tpl.html">
-        <input id="pac-input" class="pac-controls" type="text" placeholder="Search">
+        <input class="search-input" type="text" placeholder="חיפוש במפות Google">
     </script>
 
-    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
         <ui-gmap-search-box options="searchbox.options" template="searchbox.template" events="searchbox.events" position="searchbox.position"></ui-gmap-search-box>
-    </ui-gmap-google-map>
-</div>
 
-<div>
-    <ul>
-        <li>Center latitude: {{map.center.latitude}}</li>
-        <li>Center longitude: {{map.center.longitude}}</li>
-        <li>Zoom: {{map.zoom}}</li>
-        <li>Click latitude{{map.clickedMarker.latitude}}</li>
-    </ul>
-</div>
+        <ui-gmap-markers models="map.randomMarkers" coords="'self'" icon="'icon'" modelsbyref="true">
+        </ui-gmap-markers>
+    </ui-gmap-google-map>
+
+    <button ng-click="genRandomMarkers(10)">Generate</button>
+
+  
+</section>

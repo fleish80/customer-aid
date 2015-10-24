@@ -1,10 +1,23 @@
-﻿.md-toolbar-tools h1 {
+﻿body {
+    direction: rtl;
+}
+
+.md-toolbar-tools h1 {
   font-size: inherit;
   font-weight: inherit;
   margin: inherit;
 }
 
-.angular-google-map-container { 
-    width:600px;
-    height: 600px; 
+.map {
+    width:100%;
+    .angular-google-map-container { 
+        width:100%;
+        height: 90vh; 
+    }
+
+    .search-input {
+        max-width:300px;
+        width:50%;
+        height: 30px;
+    }
 }
