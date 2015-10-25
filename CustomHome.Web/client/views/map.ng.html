@@ -5,11 +5,23 @@
         <input class="search-input" type="text" placeholder="חיפוש במפות Google">
     </script>
 
+    <script type="text/ng-template" id="control.tpl.html">
+        <div class="custom-control-details">
+           
+            <md-toolbar>
+                <h2 class="md-toolbar-tools">{{business.name}}</h2>
+            </md-toolbar>
+        </div>
+    </script>
+
     <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
         <ui-gmap-search-box options="searchbox.options" template="searchbox.template" events="searchbox.events" position="searchbox.position"></ui-gmap-search-box>
 
         <ui-gmap-markers models="map.randomMarkers" coords="'self'" icon="'icon'" modelsbyref="true">
         </ui-gmap-markers>
+
+        <ui-gmap-map-control template="control.tpl.html" position="bottom-center" controller="controlCtrl" index="-1"></ui-gmap-map-control>
+
     </ui-gmap-google-map>
 
     <button ng-click="genRandomMarkers(10)">Generate</button>
