@@ -57,6 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="client\img\poalim-icon.png" />
+    <Content Include="client\img\street\51-123456-3.jpg" />
     <Content Include="Contents\angular-material.min.css" />
     <Content Include="index.html" />
     <Content Include="Scripts\angular-animate.js" />
