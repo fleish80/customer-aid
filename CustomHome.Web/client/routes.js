@@ -1,7 +1,8 @@
 ﻿angular.module("customAidApp").config(['$urlRouterProvider', '$stateProvider', '$locationProvider',
   function ($urlRouterProvider, $stateProvider, $locationProvider) {
 
-      $locationProvider.html5Mode(true);
+      // For any unmatched url, send to 404
+      $urlRouterProvider.otherwise('/404');
 
       $stateProvider
       .state('map', {
@@ -14,6 +15,6 @@
           templateUrl: 'client/views/details.ng.html',
           controller: 'detailsCtrl',
       });
-
-      $urlRouterProvider.otherwise("/");
+      $urlRouterProvider.when('', '/');
+      $urlRouterProvider.otherwise('/404');
   }]);

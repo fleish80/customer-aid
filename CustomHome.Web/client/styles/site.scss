@@ -32,5 +32,8 @@
         -moz-box-shadow: -1px 6px 46px 0px rgba(0,0,0,0.75);
         box-shadow: -1px 6px 46px 0px rgba(0,0,0,0.75);
         bottom: 33px !important;
+        img {
+            width: 100%;
+        }
     }
 }

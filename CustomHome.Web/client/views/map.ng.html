@@ -1,4 +1,4 @@
-﻿<!--<a href="/{{business.number}}">{{business.name}}</a>-->
+﻿<!--<a ui-sref="details({ businessNumber: '12345sdsdsd'})">See the Party</a>-->
 
 <section class="map">
     <script type="text/ng-template" id="searchbox.tpl.html">
@@ -11,6 +11,33 @@
             <md-toolbar>
                 <h2 class="md-toolbar-tools">{{business.name}}</h2>
             </md-toolbar>
+            <div layout="row" layout-margin layout-fill>
+                <div flex>
+                    <img src="/client/img/street/{{business.number}}.jpg">
+                </div>
+                <div flex>
+                    <md-content>
+                        <md-list>
+                            
+                            <md-list-item layout="row">
+                                <h3 flex>ח"פ:</h3>
+                                <p flex> {{ business.number }} </p>
+                            </md-list-item>
+                            <md-list-item layout="row">
+                                <h3 flex>בעלים</h3>
+                                <p flex> {{ business.owner }} </p>
+                            </md-list-item>
+                            <md-list-item layout="row">
+                                <h3 flex>מספר טלפון:</h3>
+                                <p flex> {{ business.phone }} </p>
+                            </md-list-item>
+                         </md-list>   
+                    </md-content>
+                </div>
+                <div flex hide-sm>
+                    [flex]
+                </div>
+            </div>
         </div>
     </script>
 
