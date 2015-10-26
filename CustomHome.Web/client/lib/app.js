@@ -1,4 +1,4 @@
-﻿var app = angular.module('customAidApp', ['ui.router', 'ngMaterial', 'uiGmapgoogle-maps'])
+﻿var app = angular.module('customAidApp', ['ui.router', 'ngMaterial', 'uiGmapgoogle-maps', 'ngMdIcons'])
 
 
 .config(['uiGmapGoogleMapApiProvider', function (GoogleMapApi) {

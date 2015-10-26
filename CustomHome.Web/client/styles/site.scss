@@ -22,18 +22,28 @@
     }
 
     .custom-control-details {
-        width: 600px;
-        height: 200px;
+        width: 200px;
+        height: 450px;
         background-color:white;
         border: solid 1px rgb(227, 227, 227);
         border-radius: 4px;
-        padding: 16px 16px 0px 16px;
         -webkit-box-shadow: -1px 6px 46px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: -1px 6px 46px 0px rgba(0,0,0,0.75);
         box-shadow: -1px 6px 46px 0px rgba(0,0,0,0.75);
-        bottom: 33px !important;
+        top: 33px !important;
+        right: 10px !important;
         img {
             width: 100%;
+        }
+        .close-btn-prnt {
+            z-index:3;
+            position:absolute;
+            button {
+                &.close-btn {
+                    background:none;
+                    border:none;
+                }
+            }
         }
     }
 }

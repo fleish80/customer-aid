@@ -7,35 +7,43 @@
 
     <script type="text/ng-template" id="control.tpl.html">
         <div class="custom-control-details">
-           
-            <md-toolbar>
-                <h2 class="md-toolbar-tools">{{business.name}}</h2>
-            </md-toolbar>
-            <div layout="row" layout-margin layout-fill>
-                <div flex>
+            <div class="close-btn-prnt" layout="row" layout-align="end center">
+                <button class="close-btn">
+                    <ng-md-icon icon="close" style="fill:pink" size="24"></ng-md-icon>
+                </button>
+            </div>
+            <div layout="column" layout-margin layout-fill>
+                <md-toolbar flex="10">
+                    <h2 class="md-toolbar-tools">{{business.name}}</h2>
+                </md-toolbar>
+                <div flex="30">
                     <img src="/client/img/street/{{business.number}}.jpg">
                 </div>
-                <div flex>
+                <div flex="60">
                     <md-content>
                         <md-list>
-                            
                             <md-list-item layout="row">
                                 <h3 flex>ח"פ:</h3>
                                 <p flex> {{ business.number }} </p>
                             </md-list-item>
                             <md-list-item layout="row">
-                                <h3 flex>בעלים</h3>
+                                <h3 flex>בעלים:</h3>
                                 <p flex> {{ business.owner }} </p>
                             </md-list-item>
                             <md-list-item layout="row">
                                 <h3 flex>מספר טלפון:</h3>
                                 <p flex> {{ business.phone }} </p>
                             </md-list-item>
-                         </md-list>   
+                            <md-list-item layout="row">
+                                <h3 flex>בנק:</h3>
+                                <p flex> {{ business.bank }} </p>
+                            </md-list-item>
+                            <md-list-item layout="row">
+                                <h3 flex>מחזוריות:</h3>
+                                <p flex> {{ business.period }} </p>
+                            </md-list-item>
+                        </md-list>
                     </md-content>
-                </div>
-                <div flex hide-sm>
-                    [flex]
                 </div>
             </div>
         </div>
@@ -47,11 +55,11 @@
         <ui-gmap-markers models="map.randomMarkers" coords="'self'" icon="'icon'" modelsbyref="true">
         </ui-gmap-markers>
 
-        <ui-gmap-map-control template="control.tpl.html" position="bottom-center" controller="controlCtrl" index="-1"></ui-gmap-map-control>
+        <ui-gmap-map-control template="control.tpl.html" position="top-right" controller="controlCtrl" index="-1"></ui-gmap-map-control>
 
     </ui-gmap-google-map>
 
     <button ng-click="genRandomMarkers(10)">Generate</button>
 
-  
+
 </section>
