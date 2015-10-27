@@ -7,9 +7,9 @@
 
     <script type="text/ng-template" id="control.tpl.html">
         <div class="custom-control-details">
-            <div class="close-btn-prnt" layout="row" layout-align="end center">
+            <div class="close-btn-parent" layout="row" layout-align="end center">
                 <button class="close-btn">
-                    <ng-md-icon icon="close" style="fill:pink" size="24"></ng-md-icon>
+                    <ng-md-icon icon="close" style="fill:#ffffff" size="24"></ng-md-icon>
                 </button>
             </div>
             <div layout="column" layout-margin layout-fill>
@@ -19,31 +19,32 @@
                 <div flex="30">
                     <img src="/client/img/street/{{business.number}}.jpg">
                 </div>
-                <div flex="60">
-                    <md-content>
-                        <md-list>
-                            <md-list-item layout="row">
-                                <h3 flex>ח"פ:</h3>
-                                <p flex> {{ business.number }} </p>
-                            </md-list-item>
-                            <md-list-item layout="row">
-                                <h3 flex>בעלים:</h3>
-                                <p flex> {{ business.owner }} </p>
-                            </md-list-item>
-                            <md-list-item layout="row">
-                                <h3 flex>מספר טלפון:</h3>
-                                <p flex> {{ business.phone }} </p>
-                            </md-list-item>
-                            <md-list-item layout="row">
-                                <h3 flex>בנק:</h3>
-                                <p flex> {{ business.bank }} </p>
-                            </md-list-item>
-                            <md-list-item layout="row">
-                                <h3 flex>מחזוריות:</h3>
-                                <p flex> {{ business.period }} </p>
-                            </md-list-item>
-                        </md-list>
-                    </md-content>
+                <div flex="60" layout="column">
+                    <div flex="12"  layout="row" layout-align="center center">
+                        <div flex="10"></div>
+                        <h3 flex="45">ח"פ:</h3>
+                        <p flex="45"> {{ business.number }} </p>
+                    </div>
+                    <div flex="12" layout="row">
+                        <div flex="10"></div>
+                        <h3 flex="45">בעלים:</h3>
+                        <p flex="45"> {{ business.owner }} </p>
+                    </div>
+                    <div flex="12" layout="row">
+                        <div flex="10"></div>
+                        <h3 flex="45">מספר טלפון:</h3>
+                        <p flex="45"> {{ business.phone }} </p>
+                    </div>
+                    <div flex="12" layout="row">
+                        <div flex="10"></div>
+                        <h3 flex="45">בנק:</h3>
+                        <p flex="45"> {{ business.bank }} </p>
+                    </div>
+                    <div flex="12" layout="row">
+                        <div flex="10"></div>
+                        <h3 flex="45">מחזוריות:</h3>
+                        <p flex="45"> {{ business.period }} </p>
+                    </div>
                 </div>
             </div>
         </div>
