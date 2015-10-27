@@ -1,5 +1,4 @@
 ﻿<!--<a ui-sref="details({ businessNumber: '12345sdsdsd'})">See the Party</a>-->
-
 <section class="map">
     <script type="text/ng-template" id="searchbox.tpl.html">
         <input class="search-input" type="text" placeholder="חיפוש במפות Google">
@@ -7,53 +6,55 @@
 
     <script type="text/ng-template" id="control.tpl.html">
         <div class="custom-control-details">
-            <div class="close-btn-parent" layout="row" layout-align="end center">
-                <button class="close-btn">
-                    <ng-md-icon icon="close" style="fill:#ffffff" size="24"></ng-md-icon>
-                </button>
-            </div>
-            <div layout="column" layout-margin layout-fill>
-                <md-toolbar flex="10">
-                    <h2 class="md-toolbar-tools">{{business.name}}</h2>
-                </md-toolbar>
-                <div flex="30">
-                    <img src="/client/img/street/{{business.number}}.jpg">
+            <a ui-sref="details({ businessNumber: '{{business.number}}'})">
+                <div class="close-btn-parent" layout="row" layout-align="end center">
+                    <button class="close-btn">
+                        <ng-md-icon icon="close" style="fill:#ffffff" size="24"></ng-md-icon>
+                    </button>
                 </div>
-                <div flex="60" layout="column">
-                    <div flex="12"  layout="row" layout-align="center center">
-                        <div flex="10"></div>
-                        <h3 flex="45">ח"פ:</h3>
-                        <p flex="45"> {{ business.number }} </p>
+                <div layout="column" layout-margin layout-fill>
+                    <md-toolbar flex="10">
+                        <h2 class="md-toolbar-tools">{{business.name}}</h2>
+                    </md-toolbar>
+                    <div flex="30">
+                        <img src="/client/img/street/{{business.number}}.jpg">
                     </div>
-                    <div flex="12" layout="row">
-                        <div flex="10"></div>
-                        <h3 flex="45">בעלים:</h3>
-                        <p flex="45"> {{ business.owner }} </p>
-                    </div>
-                    <div flex="12" layout="row">
-                        <div flex="10"></div>
-                        <h3 flex="45">מספר טלפון:</h3>
-                        <p flex="45"> {{ business.phone }} </p>
-                    </div>
-                    <div flex="12" layout="row">
-                        <div flex="10"></div>
-                        <h3 flex="45">בנק:</h3>
-                        <p flex="45"> {{ business.bank }} </p>
-                    </div>
-                    <div flex="12" layout="row">
-                        <div flex="10"></div>
-                        <h3 flex="45">מחזוריות:</h3>
-                        <p flex="45"> {{ business.period }} </p>
+                    <div flex="60" layout="column">
+                        <div flex="12"  layout="row" layout-align="center center">
+                            <div flex="10"></div>
+                            <h3 flex="45">ח"פ:</h3>
+                            <h3 flex="45"> {{ business.number }} </h3>
+                        </div>
+                        <div flex="12" layout="row">
+                            <div flex="10"></div>
+                            <h3 flex="45">בעלים:</h3>
+                            <h3 flex="45"> {{ business.owner }} </h3>
+                        </div>
+                        <div flex="12" layout="row">
+                            <div flex="10"></div>
+                            <h3 flex="45">מספר טלפון:</h3>
+                            <h3 flex="45"> {{ business.phone }} </h3>
+                        </div>
+                        <div flex="12" layout="row">
+                            <div flex="10"></div>
+                            <h3 flex="45">בנק:</h3>
+                            <h3 flex="45"> {{ business.bank }} </h3>
+                        </div>
+                        <div flex="12" layout="row">
+                            <div flex="10"></div>
+                            <h3 flex="45">מחזור שנתי:</h3>
+                            <h3 flex="45" layout-align="center center">{{ business.period }}</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
     </script>
 
     <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
         <ui-gmap-search-box options="searchbox.options" template="searchbox.template" events="searchbox.events" position="searchbox.position"></ui-gmap-search-box>
 
-        <ui-gmap-markers models="map.randomMarkers" coords="'self'" icon="'icon'" modelsbyref="true">
+        <ui-gmap-markers models="map.randomMarkers" coords="'self'" icon="'icon'" modelsbyref="true" click="marker.click">
         </ui-gmap-markers>
 
         <ui-gmap-map-control template="control.tpl.html" position="top-right" controller="controlCtrl" index="-1"></ui-gmap-map-control>

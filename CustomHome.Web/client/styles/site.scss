@@ -32,6 +32,10 @@
         box-shadow: -1px 6px 46px 0px rgba(0,0,0,0.75);
         top: 33px !important;
         right: 10px !important;
+        a {
+            text-decoration:none;
+            color:inherit;
+        }
         img {
             width: 100%;
             height:100%;
