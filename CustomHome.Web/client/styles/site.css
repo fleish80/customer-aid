@@ -6,6 +6,9 @@
   font-weight: inherit;
   margin: inherit; }
 
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+  color: #f5f5f5; }
+
 .map {
   width: 100%; }
   .map .angular-google-map-container {

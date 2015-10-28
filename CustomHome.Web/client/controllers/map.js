@@ -25,19 +25,13 @@
               uiGmapGoogleMapApi.then(function (maps) {
                   $scope.map = {
                       center: {
-                          latitude: 31.9522, longitude: 34.8121
+                          latitude: 32.108263, longitude: 34.803448
                       },
                       zoom: 15,
                       bounds: {},
-                      randomMarkers: []
+                      randomMarkers: randomMarkers
                   };
-                  //$scope.markers = [
-                  //    { "latitude": 3.9908431028576365, "longitude": -92.86828979738675, "title": "m0", "id": 0 },
-                  //    { "latitude": 3.9908431028576365, "longitude": -92.86828979738675, "title": "m0", "id": 0 },
-                  //    { "latitude": 3.9908431028576365, "longitude": -92.86828979738675, "title": "m0", "id": 0 },
-                  //    { "latitude": 3.9908431028576365, "longitude": -92.86828979738675, "title": "m0", "id": 0 }
-                  //];
-                  
+
                   $scope.defaultBounds = new google.maps.LatLngBounds(
                       new google.maps.LatLng(0, 0),
                       new google.maps.LatLng(0, 0));
@@ -88,6 +82,7 @@
                   };
 
               });
+
           }])
 
 .controller('controlCtrl', function ($scope) {
